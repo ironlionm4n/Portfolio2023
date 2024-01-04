@@ -1,25 +1,67 @@
 .navButtonContainer {
-    margin: 1%;
-    padding: 1%;
+  margin: 1%;
+  padding: 1%;
 }
 
 .navButtonContainer button {
-    border-radius: 8px;
-    padding: 1em;
-    font-size: 1vw;
-    font-weight: bold;
-    color: white;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 1px solid #ccc; /* Styling, adjust as needed */
-    background-color: var(--background-color);
-    cursor: pointer;
-    transition: all 0.3s ease; /* For a smooth hover effect */
-    width: 100%;
-    min-width: 10px;
+  border-radius: 8px;
+  padding: 0.5em;
+  font-size: 1vw;
+  font-weight: bold;
+  color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid #ccc; /* Styling, adjust as needed */
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: all 0.3s ease; /* For a smooth hover effect */
+  width: 100%;
+  height: 100%;
+  min-width: 10px;
 }
 
-.navButtonContainer button:hover{
-    background-color: var(--primary-color);
+.navButtonContainer button:hover {
+  background-color: var(--primary-color);
+}
+
+.burgerMenu {
+  display: none; /* Hidden by default */
+}
+
+.burgerButtonContainer {
+  background-color: var(--background-color);
+}
+
+.burgerButtonContainer button {
+  background-color: var(--background-color);
+  width: 100%;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  font-weight: 550;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .burgerMenu {
+    display: block; /* Show burger menu on small screens */
+    /* Additional styling for burger icon */
+  }
+  .navButtonContainer {
+    display: none; /* Hide button row on small screens */
+  }
+  .menu {
+    display: block;
+  }
+}
+
+.menu {
+  background-color: var(--background-color);
+  display: none;
+  display: flex;
+  flex-direction: column;
+}
+.navigationButtonsContainer {
+  display: flex;
 }
